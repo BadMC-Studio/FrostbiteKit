@@ -48,7 +48,7 @@ jobs:
         with:
           arguments: build --scan
 
-      - name: Upload JAR file
+      - name: Upload JAR file (Fabric)
         uses: actions/upload-artifact@v3
         with:
           name: FrostbiteKit-Fabric-${{ env.LAST_COMMIT_SHA }}
@@ -56,7 +56,7 @@ jobs:
             fabric/build/libs/*.jar
             !fabric/build/libs/*-sources.jar
 
-      - name: Upload JAR file
+      - name: Upload JAR file (Forge)
         uses: actions/upload-artifact@v3
         with:
           name: FrostbiteKit-Forge-${{ env.LAST_COMMIT_SHA }}
